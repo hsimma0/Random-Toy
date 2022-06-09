@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import DogDisplay from './components/DogDisplay';
 import './App.css';
 
 function App() {
@@ -9,6 +10,9 @@ function App() {
 
 const getDog = async () => {
   const response = await fetch(API_URL);
+  
+  const data = await response.json();
+    setDog(data.message)
 }
 
 //THIS IS THE HTML RETURN
@@ -16,7 +20,7 @@ const getDog = async () => {
     <div className='app'>
       <h1>Random Dog Photo Generator</h1>
       <input type="button" value="Get Random Dog" onClick={getDog} />
-      <img src={dog} alt="random dog" />
+      <DogDisplay dog= {dog} />
     </div>
     
   );
