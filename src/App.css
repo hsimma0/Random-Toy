@@ -1,8 +1,8 @@
 .App {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  
+  justify-content: center;
+
 }
 
 .App-logo {
@@ -38,4 +38,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.submit{
+ text-align: center;
+ padding-bottom: 5%;
+ padding-top: 5%;
+}
+
+.tag{
+  border-style: solid;
+  border-color:transparent ;
+  text-align: center;
+  background-color: khaki;
+}
+
+.dogImg{
+  text-align: center;
 }
